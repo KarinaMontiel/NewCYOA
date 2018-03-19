@@ -21,9 +21,9 @@ var game = {
         },
 
         cave: {
-            background_image: "fire.gif",
+            background_image: "dunkey.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You're in a cave.  What'd you expect?",
+            message: "OH MY GOD!  Could it be?!  The legends are TRUE!  It's Skyrim!!",
             choices: [
                 {
                     text: "Start over",
