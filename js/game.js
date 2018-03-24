@@ -109,7 +109,7 @@ var game = {
         },
 
         slayTheDragon: {
-            message: "Using your sword, you slay the dragon! That person you like is totally going to be into you now!",
+            message: "Using your sword, you slay the dragon! That person you like is totally going to be into you now.",
             choices: [
                 {
                     text: "Start over",
