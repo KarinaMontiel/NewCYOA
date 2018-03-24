@@ -31,7 +31,7 @@ var game = {
         },
 
         cave: {
-            message: "Inside the cave, you can go left or right",
+            message: "Using your torch, you make out two paths. One path goes left. The other goes right.",
             background_image: "fire.gif",
             choices: [
                 {
