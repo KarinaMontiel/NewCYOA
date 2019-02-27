@@ -23,24 +23,24 @@ var game = {
 
         venue: {
             background_image: "InsideVenue.png",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            music: "Crowd_Applause.wav",
             message: "Wow the there are so many seats! ",
             choices: [
                 {
                     text: "You are Excited",
-                    nextLevel: "Nervous",
+                    nextLevel: "excited",
                 },
                 
                 {
                     text: "You are Nervous",
-                    nextLevel: "Nervous",
+                    nextLevel: "nervous",
                 },
             ]
         },
 
         unload: {
             background_image: "Bus.png",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            music: "talking.mp3",
             message: "Great Choice! Now you have to go meet the rest inside.",
             choices: [
                 {
@@ -50,6 +50,23 @@ var game = {
                 {
                     text: "Go change into costume",
                     nextLevel: "change",
+                },
+            ]
+        },
+        
+            excited: {
+            background_image: "parkingLot.png",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "Wow the there are so many seats! ",
+            choices: [
+                {
+                    text: "Kill this Choreography",
+                    nextLevel: "Kill",
+                },
+                
+                {
+                    text: "",
+                    nextLevel: "",
                 },
             ]
         },
