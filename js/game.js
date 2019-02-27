@@ -33,7 +33,7 @@ var game = {
                 
                 {
                     text: "You are Nervous",
-                    nextLevel: "nervous",
+                    nextLevel: "excited",
                 },
             ]
         },
