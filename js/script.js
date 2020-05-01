@@ -1,6 +1,25 @@
 /* global $ */
 
+var storage= "";
+var storageRef= "";
+
 $(document).ready(function() {
+    const firebaseConfig = {
+        apiKey: "AIzaSyDMww8fUeHSn7Yqs5vKtl4LmQJbtpgcg5s",
+        authDomain: "cyoa-new-version.firebaseapp.com",
+        databaseURL: "https://cyoa-new-version.firebaseio.com",
+        projectId: "cyoa-new-version",
+        storageBucket: "cyoa-new-version.appspot.com",
+        messagingSenderId: "24675808271",
+        appId: "1:24675808271:web:7b543e8fc14d561124df7a",
+        measurementId: "G-XZDX3D1LK8"
+      };
+      firebase.initializeApp(firebaseConfig);
+       storage = firebase.storage();
+        storageRef = storage.ref();
+    
+
+
     var firstLevel = game.levels.start;
     renderLevel(firstLevel);
 
@@ -44,8 +63,15 @@ function setMusic(level) {
 
 function setImage(level) {
     var image = level.background_image || game.background_image || "";
-    $("#background-image").css("background-image", "url(./img/" + image + ")");
-}
+    var imageRef = storageRef.child(image);
+    imageRef.getDownloadURL().then(function(url) {
+        //do stuff here
+        $("#background-image").css("background-image", "url(" + url + ")");
+
+      }).catch(function(error) {
+          console.log("error");
+        })
+      };
 
 $.fn.extend({
     animateCss: function(animationName, callback) {
